@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Dancing+Script&family=Work+Sans:wght@100;400&display=swap");
+
+:root {
+  --var-main-bg: linear-gradient(
+    45deg,
+    rgb(87 203 255 / 82%),
+    rgb(89 135 255 / 78%)
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Abyssinica SIL", serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  position: relative;
+  background: url(/img/bg-main.webp) center center/cover;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  opacity: 0;
+  scale: 0;
+  background: url(/img/shooting-stars.gif) center top;
+  mix-blend-mode: plus-lighter;
+  animation: stars 1s ease 1s forwards;
+}
+
+.hero h1 {
+  margin: 2rem 0 1rem 0;
+  z-index: 10;
+  font-size: 3.5rem;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 1px 1px 5px black;
+}
+
+.hero p {
+  margin: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.central-image img {
+  height: 20rem;
+  width: 20rem;
+  opacity: 0;
+  scale: 0;
+  animation: appear 1s ease 2s forwards;
+  mix-blend-mode: multiply;
+}
+
+.wish {
+  background: var(--var-main-bg);
+  border-radius: 0.5rem;
+  position: relative;
+  margin: 0 1rem;
+  box-shadow: 2px 2px 20px black;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.wish span {
+  font-size: 1.5rem;
+}
+
+.wish p:nth-child(2) {
+  text-decoration: underline;
+}
+
+.form-box {
+  margin: 1rem;
+  max-width: 100%;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-area input {
+  border: none;
+  font-size: 1.5rem;
+  background: var(--var-main-bg);
+  color: white;
+  margin: 1rem;
+  padding: 0.25rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+input::placeholder {
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+.input-area button {
+  border: none;
+  font-size: 1.5rem;
+  background: var(--var-main-bg);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.music {
+  display: grid;
+  place-items: center;
+}
+
+.share-btn {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.share-btn span {
+  background: var(--var-main-bg);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0.3rem 2rem;
+  text-transform: uppercase;
+}
+
+.share-btn i {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+/* Key Frames */
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    top: 100%;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0%;
+    scale: 1;
+  }
+}
+
+@keyframes stars {
+  0% {
+    opacity: 0;
+    top: -100%;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0%;
+    scale: 1;
+  }
+}
+
+/* Media Query Starts */
+
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  .input-area input {
+    margin: 1rem 0;
+    max-width: 90%;
+  }
+
+  .wish::after,
+  .wish::before {
+    display: none;
+  }
+}
