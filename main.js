@@ -29,7 +29,7 @@ const createSubURL = (sParam) => {
 };
 
 window.jqs = createSubURL;
-let name = decodeURI(createSubURL("bl"));
+let Name = decodeURI(createSubURL("bl"));
 if (typeof createSubURL("bl") === "undefined") {
   Name = "";
 }
