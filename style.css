@@ -42,7 +42,7 @@ body {
   width: 100%;
   height: 30%;
   opacity: 0;
-  scale: 0;
+  transform: scale(0);
   background: url(/img/shooting-stars.gif) center top;
   mix-blend-mode: plus-lighter;
   animation: stars 1s ease 1s forwards;
@@ -67,7 +67,7 @@ body {
   width: 17rem;
   opacity: 0;
   margin-bottom: 2rem;
-  scale: 0;
+  transform: scale(0);
   animation: appear 1s ease 2s forwards;
 }
 
@@ -167,12 +167,12 @@ input::placeholder {
   0% {
     opacity: 0;
     top: 100%;
-    scale: 0;
+    transform: scale(0);
   }
   100% {
     opacity: 1;
     top: 0%;
-    scale: 1;
+    transform: scale(1);
   }
 }
 
@@ -180,12 +180,12 @@ input::placeholder {
   0% {
     opacity: 0;
     top: -100%;
-    scale: 0;
+    transform: scale(0);
   }
   100% {
     opacity: 1;
     top: 0%;
-    scale: 1;
+    transform: scale(1);
   }
 }
 

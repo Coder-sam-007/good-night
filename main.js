@@ -12,6 +12,13 @@ sname.addEventListener("click", function () {
   audio.play();
 });
 
+window.addEventListener("keydown", (e) => {
+  console.log("the button that was pressed is: ", e.key);
+  if (e.key == "Enter") {
+    goBTN.click();
+  }
+});
+
 window.dataLayer = window.dataLayer || [];
 function gtag() {
   dataLayer.push(arguments);
@@ -79,7 +86,7 @@ const shareActionWA = () => {
   shareString += "*" + sname.trim() + "*";
 
   shareString +=
-    " has sent you a pleasant surprise, to know what's inside just click the link below \n👉";
+    " has sent you a pleasant surprise, to know what's inside just hit the link \n👉";
   shareString += (window.location.href.split("?")[0] + "?bl=" + sname)
     .replace("#", "")
     .replace(/ /g, "-");
