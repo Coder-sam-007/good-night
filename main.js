@@ -31,15 +31,16 @@ const createSubURL = (sParam) => {
 window.jqs = createSubURL;
 let name = decodeURI(createSubURL("bl"));
 if (typeof createSubURL("bl") === "undefined") {
-  name = "";
+  Name = "";
 }
 
 const checkName = () => {
-  if (name.length !== 0) {
-    name = name.replace(/-/g, " ");
-    yourName.textContent = name;
-    msg.textContent =
-      sname.value + " is wishing you the best of your fortune this Night :)";
+  if (Name.length !== 0) {
+    Name = Name.replace(/-/g, " ");
+    yourName.textContent = Name;
+    msg.innerText =
+      sname.value +
+      " is wishing you a stressfree and peaceful night \n\n #Sweet_Dreams";
   }
 };
 
@@ -60,7 +61,9 @@ const createGreeting = () => {
     shareBTN.classList.remove("hide");
     formBox.style.display = "none";
     yourName.textContent = sname;
-    msg.textContent = " is wishing you the best of your fortune this Night :)";
+    msg.innerText =
+      " is wishing you a stressfree and peaceful night \n\n #Sweet_Dreams";
+    console.log(msg.innerText);
     window.scrollTo(0, 0);
   } else {
     alert("Please Type Your Name First");

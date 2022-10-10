@@ -63,12 +63,12 @@ body {
 }
 
 .central-image img {
-  height: 20rem;
-  width: 20rem;
+  height: 17rem;
+  width: 17rem;
   opacity: 0;
+  margin-bottom: 2rem;
   scale: 0;
   animation: appear 1s ease 2s forwards;
-  mix-blend-mode: multiply;
 }
 
 .wish {
@@ -86,7 +86,7 @@ body {
 }
 
 .wish p:nth-child(2) {
-  text-decoration: underline;
+  font-style: italic;
 }
 
 .form-box {
