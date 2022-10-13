@@ -71,19 +71,27 @@ body {
   animation: appear 1s ease 2s forwards;
 }
 
-.wish {
+.wish,
+.name-box {
   background: var(--var-main-bg);
   border-radius: 0.5rem;
   position: relative;
-  margin: 0 1rem;
+  margin: 1rem;
   box-shadow: 2px 2px 20px black;
   padding-top: 0.5rem;
+}
+
+.name-box {
+  display: none;
 }
 
 .wish span {
   font-size: 1.5rem;
 }
-
+.bg {
+  background-image: radial-gradient(45deg, black, white);
+  padding: 0.5rem;
+}
 .wish :nth-child(2) {
   font-style: italic;
   margin-bottom: 1rem;
@@ -243,5 +251,10 @@ input::placeholder {
   .wish::after,
   .wish::before {
     display: none;
+  }
+
+  .wish,
+  .name-box {
+    min-width: 92%;
   }
 }

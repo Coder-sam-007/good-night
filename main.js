@@ -7,13 +7,13 @@ const goBTN = document.querySelector("#go-btn");
 let sname = document.querySelector("#nameinput");
 const wish = document.querySelector(".wish");
 const audio = document.getElementById("my_audio");
+const nameBox = document.querySelector(".name-box");
 
 sname.addEventListener("click", function () {
   audio.play();
 });
 
 window.addEventListener("keydown", (e) => {
-  console.log("the button that was pressed is: ", e.key);
   if (e.key == "Enter") {
     goBTN.click();
   }
@@ -70,7 +70,7 @@ const createGreeting = () => {
     yourName.textContent = sname;
     msg.innerText =
       " is wishing you a stressfree and peaceful night \n\n #Sweet_Dreams";
-    console.log(msg.innerText);
+    nameBox.style.display = "block";
     window.scrollTo(0, 0);
   } else {
     alert("Please Type Your Name First");
