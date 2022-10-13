@@ -78,15 +78,44 @@ body {
   margin: 0 1rem;
   box-shadow: 2px 2px 20px black;
   padding-top: 0.5rem;
-  text-align: center;
 }
 
 .wish span {
   font-size: 1.5rem;
 }
 
-.wish p:nth-child(2) {
+.wish :nth-child(2) {
   font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.wish :nth-child(4) {
+  margin: 0 1rem;
+}
+
+#yourName {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+p span {
+  font-size: 3rem !important;
+  font-weight: bolder;
+}
+
+.fa-quote-left {
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
+.fa-quote-right {
+  font-size: 2rem;
+  float: right;
+  margin: 1rem;
 }
 
 .form-box {
