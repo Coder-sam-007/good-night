@@ -45,6 +45,7 @@ const checkName = () => {
   if (Name.length !== 0) {
     Name = Name.replace(/-/g, " ");
     yourName.textContent = Name;
+    nameBox.style.display = "block";
     msg.innerText =
       sname.value +
       " is wishing you a stressfree and peaceful night \n\n #Sweet_Dreams";
